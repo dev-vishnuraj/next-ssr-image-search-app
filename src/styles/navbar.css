@@ -1,0 +1,13 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 10px 20px;
+  color: white;
+}
+
+.nav-items-right {
+  display: flex;
+  gap: 15px;
+}
