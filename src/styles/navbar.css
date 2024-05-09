@@ -5,9 +5,30 @@
   background-color: black;
   padding: 10px 20px;
   color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .nav-items-right {
   display: flex;
-  gap: 15px;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.light-boxes, .cart {
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.sign-in-button {
+  border: 1px solid white;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.logo-text {
+  font-size: larger;
+  font-weight: bolder;
 }

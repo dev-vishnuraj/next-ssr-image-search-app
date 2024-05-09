@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../styles/dropdown.css";
+import { FaRegImage } from "react-icons/fa6";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 
 const Dropdown = ({ options }: { options: string[] }) => {
   const [selected, setSelected] = useState("");
@@ -14,24 +16,28 @@ const Dropdown = ({ options }: { options: string[] }) => {
   };
 
   return (
-    <div className="dropdown">
-      <button className="dropdown-toggle" onClick={toggleDropdown}>
-        {selected || options?.[0] || "Select a value"}{" "}
-      </button>
-      {isOpen && (
-        <div className="dropdown-menu">
-          {options.map((option, index) => (
-            <div
-              key={index}
-              className={`dropdown-item ${option === selected ? "active" : ""}`}
-              onClick={() => handleSelection(option)}
-            >
-              {option}
-            </div>
-          ))}
-        </div>
-      )}
-    </div>
+    <>
+      <div className="dropdown">
+        <button className="dropdown-toggle" onClick={toggleDropdown}>
+          <FaRegImage className="dropdown-image-icon" />
+          {selected || options?.[0] || "Select a value"}{" "}
+          <MdOutlineKeyboardArrowDown />
+        </button>
+          <div className="dropdown-menu">
+            {options.map((option, index) => (
+              <div
+                key={index}
+                className={`dropdown-item ${
+                  option === selected ? "active" : ""
+                }`}
+                onClick={() => handleSelection(option)}
+              >
+                {option}
+              </div>
+            ))}
+          </div>
+      </div>
+    </>
   );
 };
 

@@ -1,0 +1,61 @@
+/* Dropdown styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dropdown toggle (button) styling */
+.dropdown-toggle {
+  padding: 12px 6px;
+  background: #f0f0f0; /* Light grey background */
+  border: 1px solid #ccc; /* Light grey border */
+  font-size: 18px; /* Larger font size */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background 0.3s;
+  min-width: 240px;
+}
+
+.dropdown-image-icon {
+  margin-right: 10px;
+}
+
+.dropdown-toggle:hover {
+  background: #e0e0e0; /* Darken on hover */
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Position below the button */
+  left: 0;
+  min-width: 100%; /* Ensure it's as wide as the toggle */
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
+}
+
+/* Dropdown item styling */
+.dropdown-item {
+  padding: 12px 20px; /* Padding for each item */
+  font-size: 16px; /* Larger font */
+  cursor: pointer;
+  transition: background 0.3s;
+  text-wrap: nowrap;
+  border: 1px solid gray;
+}
+
+.dropdown-item:hover {
+  background: #f0f0f0; /* Light grey on hover */
+}
+
+/* Active item styling */
+.dropdown-item.active {
+  background: black; /* Blue background for active item */
+  color: white;
+  font-weight: bolder;
+}
